@@ -3,7 +3,7 @@ Por ahora la clase contiene solo metodos get y set para la carga y obtención de
 ## Instrucciones de uso
 - Primero se debe ingresar al index.php, para cargar los datos del usuario. Esto se hace mediante un facebook login, que recupera el token temporal y lo envía a setUsuario.php.
 - setUsuario.php generará un json con un token de larga duración (60 dias), los datos del usuario, las páginas de facebook y cuentas de instagram asociadas a esas páginas, almacenandolas en un archivo json con el email del usuario como nombre del archivo (email.json).
-- Si se desea usar un token permanente, en vez de uno de larga duración, hay que descomentar las lineas correspondientes al seteo del token permanente.
+- Si se desea usar un token permanente, en vez de uno de larga duración, hay que descomentar las lineas correspondientes al seteo del token permanente en setUsuario.php.
 ![Instagram-php](./imagenes/1.png)
 ![Instagram-php](./imagenes/2.png)
 ![Instagram-php](./imagenes/3.png)
@@ -27,5 +27,5 @@ Por ahora la clase contiene solo metodos get y set para la carga y obtención de
 
 ## Aclaraciones
 - SetPublicacionesYComentarios() carga los datos en mongodb
-- GetPublicaciones() obtiene los datos de la base mongodb
-- GetComentarios() obtiene los datos de la base mongodb
+- GetPublicaciones() obtiene los datos de la base mongodb, colección publicaciones
+- GetComentarios() obtiene los datos de la base mongodb, colección comentarios
